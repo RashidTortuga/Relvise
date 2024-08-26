@@ -87,6 +87,13 @@
   padding: 0 25px;
   margin: 0 auto;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+    max-width: 700px;
+    @media (max-width: 480px) {
+      max-width: 350px;
+    }
+  }
 }
 .sectionContent {
   display: flex;
@@ -95,6 +102,12 @@
   gap: 10px;
   max-width: 640px;
   text-align: center;
+  @media (max-width: 768px) {
+    max-width: 480px;
+    @media (max-width: 480px) {
+      max-width: 380px;
+    }
+  }
 }
 .sectionTitle {
   font-family: var(--font-family);
@@ -102,7 +115,12 @@
   font-size: 40px;
   line-height: 142%;
 
-  color: var(--text-color);
+  @media (max-width: 768px) {
+    font-size: 30px;
+    @media (max-width: 480px) {
+      font-size: 25px;
+    }
+  }
 }
 .sectionText {
   font-weight: 500;
@@ -110,6 +128,12 @@
   line-height: 143%;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+  @media (max-width: 768px) {
+    font-size: 10px;
+    @media (max-width: 480px) {
+      font-size: 8px;
+    }
+  }
 }
 .ibg {
   position: relative;
@@ -201,7 +225,7 @@
   color: var(--secondary-color-1);
   border: 1px solid var(--secondary-color-1);
 }
-/* /////////////////////////////////////////////////// */
+
 .designSection {
   margin: 80px auto;
 }
@@ -212,9 +236,18 @@
   gap: 30px;
 
   margin-top: -190px;
+  @media (max-width: 1050px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
+
 .designSection__listItem {
-  max-width: 330px;
+  max-width: 300px;
+
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
 }
 .designCard {
   padding: 35px 40px;
@@ -223,6 +256,9 @@
   gap: 10px;
   background-color: white;
   max-width: 300px;
+  @media (max-width: 768px) {
+    max-width: 250px;
+  }
 }
 
 .designCard__icon {
@@ -235,6 +271,13 @@
   line-height: 133%;
   letter-spacing: 0em;
   color: var(--text-color);
+  @media (max-width: 768px) {
+    font-size: 18px;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
 }
 .designCard__text {
   font-weight: 500;
@@ -243,6 +286,13 @@
   line-height: 143%;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+  @media (max-width: 768px) {
+    font-size: 10px;
+
+    @media (max-width: 480px) {
+      font-size: 8px;
+    }
+  }
 }
 .designCard.green {
   padding: 35px 40px;
@@ -257,11 +307,17 @@
   color: black;
   margin: 80px auto;
 }
-
+/* /////////////////////////////////////////////////// */
 .designSection__statisticList {
   display: flex;
   gap: 30px;
   margin: 0 auto;
+  @media (max-width: 1050px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 480px) {
+    }
+  }
 }
 .statisticList__item {
   display: flex;
@@ -281,6 +337,9 @@
   line-height: 142%;
   letter-spacing: 0.01em;
   color: var(--text-color);
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 }
 .statisticList__text {
   font-family: var(--font-family);
@@ -290,6 +349,9 @@
   letter-spacing: 0.01em;
   text-align: center;
   color: var(--second-text-color);
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 .adviceSection {
   margin: 80px auto;
@@ -298,6 +360,9 @@
   display: flex;
   justify-content: center;
   gap: 34px;
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
 }
 .adviceSection__item {
   display: flex;
@@ -327,6 +392,16 @@
 .trustSection__wrap {
   display: flex;
   gap: 130px;
+}
+.trustSection__mainVideo {
+  width: 600px;
+  height: 340px;
+  @media (max-width: 768px) {
+    width: 450px;
+  height: 340px;
+    @media (max-width: 480px) {  
+    }
+  } 
 }
 .trustSection__content {
   display: flex;
