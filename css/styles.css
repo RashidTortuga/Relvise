@@ -691,8 +691,14 @@
   background: var(--text-color);
   padding: 80px 55px;
   color: var(--light-text-color);
+  fill: none;
 }
-
+.contactCard__icon {
+  fill: var(--secondary-color-1);
+}
+.contactCard__icon.light {
+  fill: white;
+}
 .contactCard__text {
   font-family: var(--font-family);
   font-weight: 600;
@@ -715,6 +721,11 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.contactCard__button:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 .contactCard__buttonWhite {
   font-family: var(--font-family);
@@ -729,6 +740,11 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.contactCard__buttonWhite:hover {
+  background-color: white;
+  color: var(--text-color);
 }
 .consultingSection {
   padding: 40px 0;
@@ -788,14 +804,19 @@
   border-radius: 5px;
   padding: 15px 40px;
   background: var(--primary-color);
-  border: none;
   cursor: pointer;
   transition: 0.3s;
   display: flex;
   align-items: center;
+  border: 1px solid var(--primary-color);
+
   @media (max-width: 1050px) {
     padding: 10px 16px;
   }
+}
+.consultingSection__button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
 }
 .footer {
   background: var(--secondary-color-2);
@@ -806,8 +827,10 @@
   gap: 40px;
   @media (max-width: 1050px) {
     flex-wrap: wrap;
-    justify-content: start;
     padding: 50px 40px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }
 .navList {
@@ -819,7 +842,13 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  cursor: pointer;
 }
+.navList__title:hover,
+.navList__text:hover {
+  color: var(--disabled-element-color);
+}
+
 .navList__title {
   font-family: var(--font-family);
   font-weight: 700;
@@ -828,6 +857,7 @@
   letter-spacing: 0.01em;
   color: var(--light-text-color);
   margin-bottom: 10px;
+  transition: 0.3s;
 }
 .navList__text {
   font-family: var(--font-family);
@@ -836,6 +866,9 @@
   line-height: 171%;
   letter-spacing: 0.01em;
   color: var(--light-text-color);
+  transition: 0.3s;
+}
+.navList__text:hover {
 }
 .footer__icon {
   fill: var(--disabled-element-color);
@@ -862,7 +895,9 @@
   display: flex;
   gap: 20px;
 }
-
+.thanks__socialsItem{
+  cursor: pointer;
+}
 .thanks__text {
   font-family: var(--font-family);
   font-weight: 600;
@@ -870,4 +905,16 @@
   line-height: 171%;
   letter-spacing: 0.01em;
   color: var(--second-text-color);
+}
+.socialIcon__facebook {
+  fill: #335bf5;
+}
+.socialIcon__instagram {
+  fill: #e51f5a;
+}
+.socialIcon__twitter {
+  fill: #21a6df;
+}
+.socialIcon__youtube {
+  fill: #e42f08;
 }
